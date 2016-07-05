@@ -19,6 +19,24 @@
         <li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']" ng-hide="letter == 'A' || letter == 'E'"> {{ letter }} </li>
     </ul>
 
+<form>
+    <label for="first_name">First Name</label>
+    <input type="text" id="first_name" ng-model="user.firstName" maxlength="50" required>
+
+    <label for="last_name">Last Name</label>
+    <input type="text" id="last_name"  ng-model="user.lastName" maxlength="100" required>
+
+    <label for="email">eMail</label>
+    <input type="email" id="email" ng-model="user.email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" ng-model="user.password" minlength="6" required>
+</form>
+
+<div>
+    Welcome {{ user.firstName }} {{ user.lastName }}<br>
+    We will send a confirmation eMail to {{ user.email }}
+</div>
 
     <script type="text/javascript" src="/js/templateTest.js"></script>
 </body>
